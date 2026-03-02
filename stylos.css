@@ -212,12 +212,77 @@ body {
     justify-content: center;
 }
 .B-1{
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 10rem;
 }
 .B{
 background: border-box;
-margin: auto;
+margin: 0 5rem 0 5rem;
+}
+
+/* Estilos básicos de la barra */
+.navbar-2 {
+  background-color: #ffe800;
+  font-family: Arial, sans-serif;
+}
+
+.menu-principal {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.menu-principal > li > a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.menu-principal > li > a:hover {
+  background-color: #b6a80b;
+}
+
+/* --- Lógica del Desplegable --- */
+
+/* 1. Escondemos la lista de servicios por defecto */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+/* 2. Estilo de los enlaces dentro del desplegable */
+.dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* 3. ¡EL TRUCO! Mostramos el contenido al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (min-width: 950px) {
+    
+}
+
+@media (max-width:950px) {
+    
 }

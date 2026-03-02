@@ -17,30 +17,19 @@
     </ul>
     <button class="btn-login">Entrar</button>
 </nav>
-<div class="carousel-container">
-    <div class="carousel-slide active">
-        <div class="overlay"></div>
-        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80" alt="Slide 1">
-        <div class="content">
-            <h1>Impulsa tu Negocio</h1>
-            <p>Soluciones digitales a la medida de tus necesidades.</p>
-            <a href="#" class="cta-button">Ver Más</a>
-        </div>
-    </div>
 
-    <div class="carousel-slide">
-        <div class="overlay"></div>
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80" alt="Slide 2">
-        <div class="content">
-            <h1>Diseño Creativo</h1>
-            <p>Creamos interfaces que enamoran a tus usuarios.</p>
-            <a href="#" class="cta-button">Portafolio</a>
-        </div>
-    </div>
-
-    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-</div>
+<nav class="navbar-2">
+  <ul class="menu-principal">
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Servicios ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Diseños</a></li>
+        <li><a href="#">libros</a></li>
+        <li><a href="#">Topers</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 <section class="venta-1">
     <div class="trj-1">
@@ -68,6 +57,7 @@
         <img src="/img/logo carol png 1.svg" alt="" min-width="5rem"  width="50%">
     </div>
 </section>
+
 <section class="venta-1">
     <div class="trj-1">
         <div class="trj-2">      
@@ -94,19 +84,3 @@
         <img src="/img/logo carol png 1.svg" alt="" min-width="5rem"  width="50%">
     </div>
 </section>
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-
-function changeSlide(direction) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
-
-// Opcional: Cambio automático cada 5 segundos
-setInterval(() => changeSlide(1), 20000);
-</script>
-<link rel="stylesheet" href="scrip.js">
-</body>
-</html>
